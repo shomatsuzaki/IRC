@@ -72,89 +72,115 @@ img {
      overflow: none;
 }
 
+#img2sprite {
+     width: 1382px;
+     height: 867px;
+     margin: 0 auto;
+     text-align: center;
+     overflow: none;
+     background-image: url("../images/IRC_Site_2_Sprite_Sheet.jpg");
+     background-size: 1200%, 100%;
+     background-position: left;
+     background-repeat: no-repeat;
+
+     animation-name: waves;
+     animation-duration: 2s;
+     animation-timing-function: steps(11);
+     animation-iteration-count: infinite;
+}
+
+@keyframes waves {
+     from {
+          background-position: left;
+     }
+     to {
+          background-position: right;
+     }
+}
+
 @media only screen and (min-width: 1454px) {
      #img1 {display: block;}
-     #img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img2sprite,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1453px) {
-     #img2 {display: block;}
+     #img2sprite {display: block;}
      #img1,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1382px) {
      #img3 {display: block;}
-     #img1,#img2,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img2sprite,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1321px) {
      #img4 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1285px) {
      #img5 {display: block;}
-     #img1,#img3,#img2,#img4,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img4,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1244px) {
      #img6 {display: block;}
-     #img1,#img3,#img2,#img5,#img4,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img4,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1165px) {
      #img7 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img4,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img4,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 1076px) {
      #img8 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img4,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img4,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 992px) {
      #img9 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img4,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img4,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 938px) {
      #img10 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img4,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img4,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 848px) {
      #img11 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img4,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img4,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 737px) {
      #img12 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img4,#img13,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img4,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 642px) {
      #img13 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img4,#img14,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img4,#img14,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 570px) {
      #img14 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img4,#img15,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img4,#img15,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 520px) {
      #img15 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img4,#img16,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img4,#img16,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 480px) {
      #img16 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img4,#img17 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img4,#img17 {display: none;}
 }
 
 @media only screen and (max-width: 440px) {
      #img17 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img4 {display: none;}
+     #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img4 {display: none;}
 }
 
 /******************************************
