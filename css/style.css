@@ -1,8 +1,7 @@
 /* 
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
+Project Name: IRC Website
+Client: IRC
+Author: Sho Matsuzaki
 */
 
 
@@ -47,7 +46,7 @@ Developer @GA in NYC
 
 body {
      color: #000;
-     background-color: rgb(0,0,0);
+     background-color: #ffffff;
      font-size: 12px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
@@ -61,56 +60,102 @@ body {
 /* Center the container */
 #container {
 	margin: 0 auto;
-     text-align: center;
+     text-align: left;
      overflow: none;
+     position: absolute;
 }
 
 img {
-     height: 100vh;
+     width: 100%;
      margin: 0 auto;
      text-align: center;
      overflow: none;
 }
 
-@media only screen and (min-width: 1053px) {
+@media only screen and (min-width: 1454px) {
      #img1 {display: block;}
-     #img2,#img3,#img4,#img5,#img6,#img7,#img8 {display: none;}
+     #img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 1052px) {
+@media only screen and (max-width: 1453px) {
      #img2 {display: block;}
-     #img1,#img3,#img4,#img5,#img6,#img7,#img8 {display: none;}
+     #img1,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1382px) {
      #img3 {display: block;}
-     #img1,#img2,#img4,#img5,#img6,#img7,#img8 {display: none;}
+     #img1,#img2,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1321px) {
      #img4 {display: block;}
-     #img1,#img3,#img2,#img5,#img6,#img7,#img8 {display: none;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-/*@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 1285px) {
      #img5 {display: block;}
-     #img1,#img3,#img4,#img2,#img6,#img7,#img8 {display: none;}
+     #img1,#img3,#img2,#img4,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1244px) {
      #img6 {display: block;}
-     #img1,#img3,#img4,#img5,#img2,#img7,#img8 {display: none;}
+     #img1,#img3,#img2,#img5,#img4,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 1165px) {
      #img7 {display: block;}
-     #img1,#img3,#img4,#img5,#img6,#img2,#img8 {display: none;}
+     #img1,#img3,#img2,#img5,#img6,#img4,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1076px) {
      #img8 {display: block;}
-     #img1,#img3,#img4,#img5,#img6,#img7,#img2 {display: none;}
-}*/
+     #img1,#img3,#img2,#img5,#img6,#img7,#img4,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 992px) {
+     #img9 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img4,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 938px) {
+     #img10 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img4,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 848px) {
+     #img11 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img4,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 737px) {
+     #img12 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img4,#img13,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 642px) {
+     #img13 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img4,#img14,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 570px) {
+     #img14 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img4,#img15,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 520px) {
+     #img15 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img4,#img16,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 480px) {
+     #img16 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img4,#img17 {display: none;}
+}
+
+@media only screen and (max-width: 440px) {
+     #img17 {display: block;}
+     #img1,#img3,#img2,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img4 {display: none;}
+}
 
 /******************************************
 /* ADDITIONAL STYLES                   
