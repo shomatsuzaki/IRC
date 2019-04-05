@@ -1,5 +1,5 @@
 /* 
-Project Name: IRC Website
+Project Name: IRC Donation Website
 Client: IRC
 Author: Sho Matsuzaki
 */
@@ -26,10 +26,6 @@ Author: Sho Matsuzaki
      height: 0;
 }
 
-.clear {
-	clear: both;
-}
-
 .alignright {
 	float: right; 
 	padding: 0 0 10px 10px; /* note the padding around a right floated image */
@@ -46,10 +42,10 @@ Author: Sho Matsuzaki
 
 body {
      color: #000;
-     background-color: #ffffff;
+     background-color: #FCCA49;
      font-size: 12px;
      line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+     font-family: Helvetica, Arial, sans-serif
 }
 
 
@@ -57,47 +53,164 @@ body {
 /* LAYOUT                   
 /*******************************************/
 
-/* Center the container */
 #container {
-	margin: 0 auto;
+     float: left;
      text-align: left;
      overflow: none;
-     position: absolute;
+     width:100%;
 }
 
 img {
-     width: 100%;
-     margin: 0 auto;
-     text-align: center;
-     overflow: none;
+     display: none;
+     position: absolute;
 }
 
-#img2sprite {
-     width: 1382px;
-     height: 867px;
+#img1440 {
+     z-index: 1;
+     width:100%;
+}
+
+#img1400 {
+     z-index: 2;
+}
+
+#img1350 {
+     z-index: 3;
+}
+
+#img1300 {
+     z-index: 4;
+}
+
+#img1250 {
+     z-index: 5;
+}
+
+#img1200 {
+     z-index: 6;
+}
+
+#img1150 {
+     z-index: 7;
+}
+
+#img1100 {
+     z-index: 8;
+}
+
+#img1050 {
+     z-index: 9;
+}
+
+#img1000 {
+     z-index: 10;
+}
+
+#img950 {
+     z-index: 11;
+}
+
+#img900 {
+     z-index: 12;
+}
+
+#img850 {
+     z-index: 13;
+}
+
+#img800 {
+     z-index: 14;
+}
+
+#img750 {
+     z-index: 15;
+}
+
+#img700 {
+     z-index: 16;
+}
+
+#img650 {
+     z-index: 17;
+}
+
+#img600 {
+     z-index: 18;
+}
+
+#img550 {
+     z-index: 19;
+}
+
+#img520 {
+     z-index: 20;
+}
+
+/*#img500 {
+     z-index: 21;
+}*/
+
+#img480 {
+     z-index: 22;
+}
+
+/*#img460 {
+     z-index: 23;
+}*/
+
+#img445 {
+     z-index: 24;
+}
+
+#img445:hover {
+     cursor: pointer;
+}
+
+/*#sand {
+     z-index: 90;
+     position: absolute;
+     width: 1440px;
+     height: 900px;
      margin: 0 auto;
      text-align: center;
      overflow: none;
-     background-image: url("../images/IRC_Site_2_Sprite_Sheet.jpg");
-     background-size: 1200%, 100%;
+     background-image: url("../images/sand_sprite.png");
+     background-size: 3600%, 100%;
      background-position: left;
      background-repeat: no-repeat;
 
-     animation-name: waves;
-     animation-duration: 2s;
-     animation-timing-function: steps(11);
+     animation-name: sprite-animation;
+     animation-duration: 15s;
+     animation-timing-function: steps(35);
      animation-iteration-count: infinite;
 }
 
-@keyframes waves {
+#pointer {
+     position: absolute;
+     width: 1440px;
+     height: 900px;
+     margin: 0 auto;
+     text-align: center;
+     overflow: none;
+     background-image: url("../images/pointer_sprite.png");
+     background-size: 3600%, 100%;
+     background-position: left;
+     background-repeat: no-repeat;
+
+     animation: sprite-animation 1.5s steps(35) forwards;
+     animation-delay: 5s;
+}
+
+@keyframes sprite-animation {
      from {
           background-position: left;
      }
      to {
           background-position: right;
      }
-}
+}*/
 
+/*
 @media only screen and (min-width: 1454px) {
      #img1 {display: block;}
      #img2sprite,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17 {display: none;}
@@ -181,12 +294,6 @@ img {
 @media only screen and (max-width: 440px) {
      #img17 {display: block;}
      #img1,#img3,#img2sprite,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img4 {display: none;}
-}
-
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
-
-
+}*/
 
 
