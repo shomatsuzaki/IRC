@@ -74,6 +74,13 @@ $(document).ready(function() {
 		}
 	};
 
+	//need counter to determine if window is shrinking or growing
+	var prev = 0;
+	//need booleans to check if modals are displayed
+	var modal1on = false;
+	var modal2on = false;
+	var modal3on = false;
+
 	window.onresize = function() {
 		var w = window.innerWidth;
 
@@ -94,6 +101,16 @@ $(document).ready(function() {
 		} else if (w >= 1300) {
 			$('#img1440, #img1400, #img1350, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1300').show();
+			//modal1 fades in/out
+			if (prev > w && !modal1on) {
+				$('#modal1').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal1on = true;
+			} else if (prev < w && modal1on) {
+				$('#modal1').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal1on = false;
+			}
 		} else if (w >= 1250) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1250').show();
@@ -106,12 +123,32 @@ $(document).ready(function() {
 		} else if (w >= 1100) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1100').show();
+			//modal1 fades in/out
+			if (prev > w && modal1on) {
+				$('#modal1').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal1on = false;
+			} else if (prev < w && !modal1on) {
+				$('#modal1').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal1on = true;
+			}
 		} else if (w >= 1050) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1050').show();
 		} else if (w >= 1000) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1000').show();
+			//modal2 fades in/out
+			if (prev > w && !modal2on) {
+				$('#modal2').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal2on = true;
+			} else if (prev < w && modal2on) {
+				$('#modal2').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal2on = false;
+			}
 		} else if (w >= 950) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img950').show();
@@ -124,6 +161,16 @@ $(document).ready(function() {
 		} else if (w >= 800) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img800').show();
+			//modal2 fades in/out
+			if (prev > w && modal2on) {
+				$('#modal2').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal2on = false;
+			} else if (prev < w && !modal2on) {
+				$('#modal2').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal2on = true;
+			}
 		} else if (w >= 750) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img750').show();
@@ -162,8 +209,12 @@ $(document).ready(function() {
 		} else if (w >= 200) {
 			$('#img445').css("width", "100%");
 		}
+
+		//set previous counter to remember last size
+		prev = w;
 	};
 
+	//link out to donation page
 	$('#img445').click(function () {
 		var url = 'https://rescue.org';
 		var win = window.open(url, "_blank", "width=1366,height=768");

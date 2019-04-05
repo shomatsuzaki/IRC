@@ -70,6 +70,22 @@ img {
      width: 100%;
 }
 
+#modal1 {
+     z-index: 100;
+     top: 390px;
+     left: 120px;
+     width: 340px;
+     height: auto;
+}
+
+#modal2 {
+     z-index: 101;
+     top: 94px;
+     left: 120px;
+     width: 274px;
+     height: auto;
+}
+
 #img1440 {
      z-index: 1;
      width:100%;
