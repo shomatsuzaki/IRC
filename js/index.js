@@ -8,39 +8,92 @@ $(document).ready(function() {
 	    $('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 	}
 
+	//need counter to determine if window is shrinking or growing
+	var prev = 0;
+	//need booleans to check if modals and header are displayed
+	var modal1on = false;
+	var modal2on = false;
+	var modal3on = false;
+	var headeron = false;
+
 	window.onload = function() {
 		var w = window.innerWidth;
+		prev = w;
 
 		if (w >= 1700) {
-			$('#img1440').css("width", "1700px");
-			$('#img1440').fadeIn(700);
+			$('#img1440, #mainheader, #pointer').css("width", "1700px");
+			$('#img1440, #mainheader').fadeIn(700);
+			$('#pointer').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
+			headeron = true;
 		} else if (w >= 1440) {
-			$('#img1440').css("width", "100%");
-			$('#img1440').fadeIn(700);
+			$('#img1440, #pointer').css("width", "100%");
+			$('#img1440, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
 		} else if (w >= 1400) {
-			$('#img1400').fadeIn(700);
+			$('#img1400, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer').css({width: "1340px", height: "728px", left: "55px"});
+			$('#pointer').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
 		} else if (w >= 1350) {
-			$('#img1350').fadeIn(700);
+			$('#img1350, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer').css({width: "1280px", height: "728px", left: "65px"});
+			$('#pointer').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
 		} else if (w >= 1300) {
-			$('#img1300').fadeIn(700);
+			$('#img1300, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer2').css({width: "1500px", height: "728px", left: "-200px"});
+			$('#pointer2').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 1250) {
-			$('#img1250').fadeIn(700);
+			$('#img1250, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer2').css({width: "1440px", height: "735px", left: "-195px", top: "-8px"});
+			$('#pointer2').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 1200) {
-			$('#img1200').fadeIn(700);
+			$('#img1200, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#pointer2').css({width: "1390px", height: "748px", left: "-190px", top: "-18px"});
+			$('#pointer2').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 1150) {
-			$('#img1150').fadeIn(700);
+			$('#img1150, #mainheader').fadeIn(700);
+			headeron = true;
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 1100) {
 			$('#img1100').fadeIn(700);
 		} else if (w >= 1050) {
 			$('#img1050').fadeIn(700);
 		} else if (w >= 1000) {
 			$('#img1000').fadeIn(700);
+			$('#modal2').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal2on = true;
 		} else if (w >= 950) {
 			$('#img950').fadeIn(700);
+			$('#modal2').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal2on = true;
 		} else if (w >= 900) {
 			$('#img900').fadeIn(700);
+			$('#modal2').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal2on = true;
 		} else if (w >= 850) {
 			$('#img850').fadeIn(700);
+			$('#modal2').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal2on = true;
 		} else if (w >= 800) {
 			$('#img800').fadeIn(700);
 		} else if (w >= 750) {
@@ -73,13 +126,6 @@ $(document).ready(function() {
 			$('#img445').fadeIn(700);
 		}
 	};
-
-	//need counter to determine if window is shrinking or growing
-	var prev = 0;
-	//need booleans to check if modals are displayed
-	var modal1on = false;
-	var modal2on = false;
-	var modal3on = false;
 
 	window.onresize = function() {
 		var w = window.innerWidth;
@@ -132,6 +178,13 @@ $(document).ready(function() {
 				$('#modal1').fadeIn(300);
 				console.log("Window is " + w + " and previous was " + prev);
 				modal1on = true;
+			}
+			if (prev > w && headeron) {
+				$('#mainheader').fadeOut(300);
+				headeron = false;
+			} else if (prev < w && !headeron) {
+				$('#mainheader').fadeIn(300);
+				headeron = true;
 			}
 		} else if (w >= 1050) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
