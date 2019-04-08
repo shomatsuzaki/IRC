@@ -76,21 +76,25 @@ $(document).ready(function() {
 			$('#img1050').fadeIn(700);
 		} else if (w >= 1000) {
 			$('#img1000').fadeIn(700);
+			$('#modal2').css("left", "570px");
 			$('#modal2').fadeIn(700);
 			console.log("Window is " + w + " and previous was n/a");
 			modal2on = true;
 		} else if (w >= 950) {
 			$('#img950').fadeIn(700);
+			$('#modal2').css("left", "520px");
 			$('#modal2').fadeIn(700);
 			console.log("Window is " + w + " and previous was n/a");
 			modal2on = true;
 		} else if (w >= 900) {
 			$('#img900').fadeIn(700);
+			$('#modal2').css("left", "470px");
 			$('#modal2').fadeIn(700);
 			console.log("Window is " + w + " and previous was n/a");
 			modal2on = true;
 		} else if (w >= 850) {
 			$('#img850').fadeIn(700);
+			$('#modal2').css("left", "420px");
 			$('#modal2').fadeIn(700);
 			console.log("Window is " + w + " and previous was n/a");
 			modal2on = true;
@@ -98,10 +102,19 @@ $(document).ready(function() {
 			$('#img800').fadeIn(700);
 		} else if (w >= 750) {
 			$('#img750').fadeIn(700);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 700) {
 			$('#img700').fadeIn(700);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 650) {
 			$('#img650').fadeIn(700);
+			$('#modal1').fadeIn(700);
+			console.log("Window is " + w + " and previous was n/a");
+			modal1on = true;
 		} else if (w >= 600) {
 			$('#img600').fadeIn(700);
 		} else if (w >= 550) {
@@ -194,6 +207,7 @@ $(document).ready(function() {
 			$('#img1000').show();
 			//modal2 fades in/out
 			if (prev > w && !modal2on) {
+				$('#modal2').css("left", "570px");
 				$('#modal2').fadeIn(300);
 				console.log("Window is " + w + " and previous was " + prev);
 				modal2on = true;
@@ -205,15 +219,19 @@ $(document).ready(function() {
 		} else if (w >= 950) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img950').show();
+			$('#modal2').css("left", "520px");
 		} else if (w >= 900) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img900').show();
+			$('#modal2').css("left", "470px");
 		} else if (w >= 850) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img850').show();
+			$('#modal2').css("left", "420px");
 		} else if (w >= 800) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img800').show();
+			$('#modal2').css("left", "370px");
 			//modal2 fades in/out
 			if (prev > w && modal2on) {
 				$('#modal2').fadeOut(300);
@@ -227,6 +245,16 @@ $(document).ready(function() {
 		} else if (w >= 750) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img750').show();
+			//modal3 fades in/out
+			if (prev > w && !modal3on) {
+				$('#modal3').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal3on = true;
+			} else if (prev < w && modal3on) {
+				$('#modal3').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal3on = false;
+			}
 		} else if (w >= 700) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img700').show();
@@ -236,6 +264,16 @@ $(document).ready(function() {
 		} else if (w >= 600) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img600').show();
+			//modal3 fades in/out
+			if (prev > w && modal3on) {
+				$('#modal3').fadeOut(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal3on = false;
+			} else if (prev < w && !modal3on) {
+				$('#modal3').fadeIn(300);
+				console.log("Window is " + w + " and previous was " + prev);
+				modal3on = true;
+			}
 		} else if (w >= 550) {
 			$('#img1440, #img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img550').show();

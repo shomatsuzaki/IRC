@@ -95,15 +95,18 @@ img {
 
 #modal2 {
      z-index: 101;
-     top: 94px;
-     left: 120px;
+     top: 214px;
      width: 274px;
      height: auto;
 }
 
-/*#modal3 {
+#modal3 {
      z-index: 100;
-}*/
+     top: 390px;
+     left: 120px;
+     width: 340px;
+     height: auto;
+}
 
 #img1440 {
      z-index: 1;
