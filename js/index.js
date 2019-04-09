@@ -147,10 +147,16 @@ $(document).ready(function() {
 			$('#img1440').css("width", "1700px");
 			$('#img1440').show();
 			$('#img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
+			if (prev < w) {
+				$('#mainheader').css("width", "1700px");
+			}
 		} else if (w >= 1440) {
 			$('#img1440').css("width", "100%");
 			$('#img1440').show();
 			$('#img1400, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
+			if (prev > w) {
+				$('#mainheader').css("width", "100%");
+			}
 		} else if (w >= 1400) {
 			$('#img1440, #img1350, #img1300, #img1250, #img1200, #img1150, #img1100, #img1050, #img1000, #img950, #img900, #img850, #img800, #img750, #img700, #img650, #img600, #img550, #img520, #img500, #img480, #img460, #img445').hide();
 			$('#img1400').show();
