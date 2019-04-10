@@ -70,7 +70,12 @@ img {
      width: 100%;
 }
 
-#pointer2 {
+#fakeborder {
+     z-index: 110;
+     left: 0;
+}
+
+/*#pointer2 {
      z-index: 105;
      width: 1440px;
 }
@@ -78,7 +83,7 @@ img {
 #pointer {
      z-index: 104;
      width: 1440px;
-}
+}*/
 
 #mainheader {
      z-index: 103;
