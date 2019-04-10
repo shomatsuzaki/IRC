@@ -23,6 +23,7 @@ $(document).ready(function() {
 		if (w >= 1700) {
 			$('#img1440, #mainheader, #fakeborder').css("width", "1700px");
 			$('#img1440, #mainheader').fadeIn(700);
+			$('#fakeborder').toggle().delay(800).animate({ left: "-=15" }, 500).animate({ left: "+=15" }, 500).delay(500).animate({ left: "-=15" }, 500).animate({ left: "+=15" }, 500).fadeOut(300);
 			// $('#pointer').delay(1000).fadeIn(300).delay(300).fadeOut(300).delay(300).fadeIn(300).delay(300).fadeOut(300);
 			headeron = true;
 		} else if (w >= 1440) {
